@@ -46,7 +46,7 @@ header.app-nav{position:sticky;top:0;z-index:100;background:rgba(8,14,30,0.96);b
 .kpi-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;background:var(--card);border:1px solid var(--bd);border-radius:6px}
 
 /* Tab Views */
-.tab-view{display:none;padding:20px 0 36px;animation:fadeIn .22s ease-out}
+.tab-view{display:none;padding:20px 0 36px;scroll-margin-top:130px;animation:fadeIn .22s ease-out}
 .tab-view.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 
@@ -189,7 +189,7 @@ canvas{width:100%;height:150px;display:block}
       <!-- Panoramic Cross Section Elevation -->
       <div class="card" style="padding:10px">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-          <span class="eye">Outfall Elevation · Digital Twin ($1\,\text{Hz}$ SCADA)</span>
+          <span class="eye">Outfall Elevation · Digital Twin (1 Hz SCADA)</span>
           <span id="stamp" style="font-size:11.5px;color:var(--mute)">Waiting for packet...</span>
         </div>
         <svg id="plan" viewBox="0 0 760 270" class="slack" role="img" aria-label="Widescreen digital twin elevation of tidal outfall, barrier, and conveyor">
@@ -220,7 +220,7 @@ canvas{width:100%;height:150px;display:block}
         </div>
         
         <div class="card-sub" style="margin:10px 0">
-          <div class="lab">Differential Head ($\Delta H$)</div>
+          <div class="lab">Differential Head (&Delta;H)</div>
           <div style="font:800 38px/1 var(--serif);color:var(--amber);margin:4px 0"><span id="dH">--</span> <small style="font-size:18px">m</small></div>
           <p class="note" style="margin:0">Upstream depth minus tidal creek water elevation.</p>
         </div>
@@ -251,8 +251,8 @@ canvas{width:100%;height:150px;display:block}
         <h3>Level Dynamics (Rolling 120s)</h3>
         <canvas id="chart"></canvas>
         <div style="display:flex;gap:16px;font-size:11.5px;margin-top:6px">
-          <span style="color:#F59E0B">● Upstream Drain ($h_1$)</span>
-          <span style="color:#0EA5E9">● Tidal Estuary ($h_2$)</span>
+          <span style="color:#F59E0B">● Upstream Drain (h₁)</span>
+          <span style="color:#0EA5E9">● Tidal Estuary (h₂)</span>
         </div>
       </div>
 
@@ -374,15 +374,15 @@ canvas{width:100%;height:150px;display:block}
               <text x="250" y="44" fill="#F8FAFC" font-size="9" font-weight="700" text-anchor="middle">Wc</text>
             </g>
             <g font-family="sans-serif" font-size="11" fill="#E2E8F0">
-              <text x="100" y="72" fill="#38BDF8">Upstream Flood: $h_1 = 2.40\,\text{m}$</text>
-              <text x="440" y="120" fill="#7DD3FC">Downstream Estuary: $h_2 = 1.40\,\text{m}$</text>
+              <text x="100" y="72" fill="#38BDF8">Upstream Flood: h₁ = 2.40 m</text>
+              <text x="440" y="120" fill="#7DD3FC">Downstream Estuary: h₂ = 1.40 m</text>
               <text x="320" y="60" fill="#F59E0B">Grade 316 Stainless Bushing</text>
               <text id="txtGateState" x="320" y="200" font-size="12" font-weight="700" fill="#10B981">STATUS: CLOSED (Retention Active)</text>
             </g>
           </svg>
         </div>
         <p style="margin-top:10px;font-size:13px;color:#CBD5E1">
-          <b>Zero-Power Physics:</b> When differential head exceeds $\Delta H \ge 0.45\,\text{m}$, the water's natural hydrostatic pressure overcomes the counterweight ($W_c$), swinging the gate open $72^\circ$ with <b>0% electricity required</b>, guaranteeing zero street backup.
+          <b>Zero-Power Physics:</b> When differential head exceeds &Delta;H &ge; 0.45 m, the water's natural hydrostatic pressure overcomes the counterweight (W<sub>c</sub>), swinging the gate open 72° with <b>0% electricity required</b>, guaranteeing zero street backup.
         </p>
       </div>
 
@@ -420,7 +420,7 @@ canvas{width:100%;height:150px;display:block}
           </svg>
         </div>
         <p style="margin-top:10px;font-size:13px;color:#CBD5E1">
-          <b>Acoustic Integrity:</b> A $350\,\text{mm}$ standoff collar encloses the sensor head so the $250\,\text{mm}$ ringing blind zone is internalized. A non-wetting ePTFE membrane prevents salt droplets from bridging the piezo face.
+          <b>Acoustic Integrity:</b> A 350 mm standoff collar encloses the sensor head so the 250 mm ringing blind zone is internalized. A non-wetting ePTFE membrane prevents salt droplets from bridging the piezo face.
         </p>
       </div>
     </div>
@@ -431,7 +431,7 @@ canvas{width:100%;height:150px;display:block}
         <div>
           <span class="tag" style="background:#0F293E;color:#38BDF8">Jury Challenge 03 · Microplastic Separation & Circularity</span>
           <h3 style="margin:6px 0 2px;font-size:19px">Biomimetic Manta-Ray Ricochet Microfluidics & Industrial Upcycling</h3>
-          <p class="note" style="margin:0;font-size:13px">Non-clogging inertial vortex ricochet separates secondary microplastics ($50\,\mu\text{m}\text{ to }5\,\text{mm}$) via 5% wake slipstream, feeding IRC:SP:53 road bitumen and geopolymer paver streams.</p>
+          <p class="note" style="margin:0;font-size:13px">Non-clogging inertial vortex ricochet separates secondary microplastics (50 &mu;m to 5 mm) via 5% wake slipstream, feeding IRC:SP:53 road bitumen and geopolymer paver streams.</p>
         </div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
           <button class="btn-pri" id="btnToggleRicochet" style="font-size:12px;padding:6px 14px">⏸ Pause Physics</button>
@@ -603,7 +603,7 @@ canvas{width:100%;height:150px;display:block}
         <div class="eng-legend">
           <span><i class="legend-dot" style="background:#0EA5E9"></i> Biomimetic Hydrofoil Lobes (Manta Ray Rakers)</span>
           <span><i class="legend-dot" style="background:#38BDF8"></i> Fluid Boundary Vortices (Forces Particle Ricochet)</span>
-          <span><i class="legend-dot" style="background:#EF4444"></i> Microplastic Ricochet Path ($50\,\mu\text{m}\text{--}5\,\text{mm}$)</span>
+          <span><i class="legend-dot" style="background:#EF4444"></i> Microplastic Ricochet Path (50 &mu;m &ndash; 5 mm)</span>
           <span><i class="legend-dot" style="background:#F59E0B"></i> Removable Dewatering Cartridge</span>
         </div>
       </div>
@@ -612,7 +612,7 @@ canvas{width:100%;height:150px;display:block}
       <div id="schematicInspector" class="card-sub" style="margin-top:10px;border-left:3px solid var(--teal);padding:10px 14px;background:#09152B;font-size:12.5px;line-height:1.5">
         <b style="color:var(--teal)">Interactive Component Inspector:</b> <span id="inspectorTitle" style="color:var(--cream);font-weight:700">Manta Ray Gill Raker Lobes & Ricochet Physics</span>
         <p id="inspectorBody" style="margin:4px 0 0;color:#CBD5E1">
-          Water turns $90^\circ$ through the inter-raker channels, creating steady boundary layer vortex eddies in the troughs. Microplastic particles have higher inertia ($\text{Stokes Number } \text{Stk} = \frac{\rho_p d_p^2 u}{18 \mu L} \gg 1$) and cannot follow the bending streamlines; they ricochet off the vortex shear layer back into the central channel without ever touching or clogging filter pores.
+          Water turns 90° through the inter-raker channels, creating steady boundary layer vortex eddies in the troughs. Microplastic particles have higher inertia (Stokes Number Stk = (&rho;<sub>p</sub> d<sub>p</sub><sup>2</sup> u) / (18 &mu; L) &gt;&gt; 1) and cannot follow the bending streamlines; they ricochet off the vortex shear layer back into the central channel without ever touching or clogging filter pores.
         </p>
       </div>
 
@@ -622,15 +622,15 @@ canvas{width:100%;height:150px;display:block}
         <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:6px">
           <div class="card-sub upcycle-btn active" data-route="bitumen" style="cursor:pointer;border-left:3px solid #F59E0B;transition:all 0.2s">
             <b style="color:#F59E0B;font-size:13.5px">1. IRC:SP:53 Polymer-Modified Bitumen</b>
-            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Hot-air dried & blended at $160^\circ\text{C}$ with road asphalt at $6\text{--}8\%$ weight ratio per Indian Road Congress. Elevates softening point, eliminates pavement rutting, and seals road against Mumbai monsoon rains (pothole prevention).</p>
+            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Hot-air dried & blended at 160°C with road asphalt at 6–8% weight ratio per Indian Road Congress. Elevates softening point, eliminates pavement rutting, and seals road against Mumbai monsoon rains (pothole prevention).</p>
           </div>
           <div class="card-sub upcycle-btn" data-route="pavers" style="cursor:pointer;border-left:3px solid #0EA5E9;transition:all 0.2s">
             <b style="color:#0EA5E9;font-size:13.5px">2. Geopolymer Permeable Pavers</b>
-            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Recovered flakes replace $5\text{--}12\%$ fine aggregate in fly-ash/slag geopolymer mortar. Reduces tile weight by $15\%$, increases impact ductility, and yields water-permeable municipal footpath tiles reducing urban stormwater runoff.</p>
+            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Recovered flakes replace 5–12% fine aggregate in fly-ash/slag geopolymer mortar. Reduces tile weight by 15%, increases impact ductility, and yields water-permeable municipal footpath tiles reducing urban stormwater runoff.</p>
           </div>
           <div class="card-sub upcycle-btn" data-route="afr" style="cursor:pointer;border-left:3px solid #10B981;transition:all 0.2s">
             <b style="color:#10B981;font-size:13.5px">3. Cement Kiln Co-Processing (AFR)</b>
-            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Heavily degraded/salty multi-polymer fractions with high calorific value ($>6,500\,\text{kcal/kg}$) are co-processed as Alternate Fuel & Raw Material in $1400^\circ\text{C}$ cement kilns, leaving zero residual ash or landfill burden.</p>
+            <p style="margin-top:4px;font-size:12px;color:#CBD5E1">Heavily degraded/salty multi-polymer fractions with high calorific value (&gt;6,500 kcal/kg) are co-processed as Alternate Fuel & Raw Material in 1400°C cement kilns, leaving zero residual ash or landfill burden.</p>
           </div>
         </div>
 
@@ -641,10 +641,10 @@ canvas{width:100%;height:150px;display:block}
             <span class="tag" id="upcycleBadge" style="background:#1B2A4A;color:#38BDF8">Indian Road Congress (IRC:120 & IRC:SP:53)</span>
           </div>
           <div id="upcycleBody" style="margin-top:6px;color:#CBD5E1;line-height:1.55">
-            <b>Feedstock Preparation:</b> Dewatered microplastics ($50\,\mu\text{m}\text{--}5\,\text{mm}$ PE/PP flakes) from Sump Cassette are flash-dried with solar/hot-air down to &lt;1% moisture.<br>
+            <b>Feedstock Preparation:</b> Dewatered microplastics (50 &mu;m &ndash; 5 mm PE/PP flakes) from Sump Cassette are flash-dried with solar/hot-air down to &lt;1% moisture.<br>
             <b>Mixing Parameters:</b> Blended at 6&ndash;8% by weight into standard VG-30 Bitumen at 160&ndash;170&deg;C using high-shear mechanical impeller for 45 minutes.<br>
             <b>Key Engineering Property Gain:</b> Softening point increased from 47&deg;C to &gt;62&deg;C; Marshall stability increased by 28%; stripping value &lt;5% (exceptional water resistance).<br>
-            <b>Municipal ROI for Mumbai (BMC):</b> Directly prevents pothole formation along coastal arterial roads, saving approximately &dollar;2.2M annually in emergency asphalt patching while sequestering 120 tonnes of microplastics annually.
+            <b>Municipal ROI for Mumbai (BMC):</b> Directly prevents pothole formation along coastal arterial roads, saving approximately &#8377;18.4 Cr annually in emergency asphalt patching while sequestering 120 tonnes of microplastics annually.
           </div>
         </div>
       </div>
@@ -772,7 +772,7 @@ canvas{width:100%;height:150px;display:block}
           <span class="eye">Pilot Site Validation</span>
           <h2 style="font-size:20px">Mithi River Outfall at Mahim Creek</h2>
           <div id="map">Map tiles loading...</div>
-          <p class="note" style="margin-top:8px">Coordinates: $19.0425^\circ\,\text{N},\, 72.8435^\circ\,\text{E}$. Highest-priority outfall identified in Techfest 2026-27 brief.</p>
+          <p class="note" style="margin-top:8px">Coordinates: 19.0425° N, 72.8435° E. Highest-priority outfall identified in Techfest 2026-27 brief.</p>
         </div>
         <div class="card-sub" style="margin-top:10px">
           <b>BMC Retrofit Contract:</b> Upgrades BMC's 21 existing outfall trash boom contracts (₹14.5 crore maintenance package) with automated two-way harvesting.
@@ -868,7 +868,7 @@ const SENS = [
 
 const HW = [
   ['Telemetry & Control Hub', 'ESP32-S3 DevKitC (Dual Core 240MHz)', '2', 'Autonomous state machine, sensor fusion, and Wi-Fi/4G telemetry'],
-  ['Dual Ultrasonic Ranging', 'AJ-SR04T Waterproof (IP67) + Standoff', '2', 'Differential head ($\Delta H$) measurement outside $250\,\text{mm}$ ringing zone'],
+  ['Dual Ultrasonic Ranging', 'AJ-SR04T Waterproof (IP67) + Standoff', '2', 'Differential head (ΔH) measurement outside 250 mm ringing zone'],
   ['Acoustic Doppler Velocity', 'Submersible Doppler Velocity Module', '1', 'Bidirectional flow velocity and tidal phase orientation'],
   ['Payload Fill Sensor', 'VL53L0X Time-of-Flight (ToF) Array', '1', 'Solid-state distance measurement inside debris collection box'],
   ['Structural Deflection IMU', 'MPU-6050 Accelerometer / Gyro', '1', 'Monitors barrier tilt, wave impact, and log collision loads'],
